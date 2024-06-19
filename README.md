@@ -232,7 +232,7 @@ maftuh/
 
 ## Contributing
 
-I welcome contributions from developers of all levels. Please read the [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
+I welcome contributions from developers of all levels. Any suggestions, corrections, feedback, and contributions, especially from experienced developers, are highly appreciated. Kindly create an issue before submitting a pull request.
 
 ## License
 
