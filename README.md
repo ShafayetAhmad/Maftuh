@@ -28,6 +28,7 @@ Maftuh is a full-stack web application that aims to replicate the functionalitie
   - Next.js
   - Tailwind CSS
   - TypeScript
+  - Redux
   - Axios for API requests
   - TanStack Query for data fetching
 
@@ -102,24 +103,95 @@ Maftuh is a full-stack web application that aims to replicate the functionalitie
 maftuh/
 ├── backend/
 │   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── middlewares/
+│   │   ├── modules/
+│   │   │   ├── auth/
+│   │   │   │   ├── controllers/
+│   │   │   │   │   └── authController.ts
+│   │   │   │   ├── models/
+│   │   │   │   │   └── userModel.ts
+│   │   │   │   ├── routes/
+│   │   │   │   │   └── authRoutes.ts
+│   │   │   │   ├── middlewares/
+│   │   │   │   │   └── authMiddleware.ts
+│   │   │   │   ├── services/
+│   │   │   │   │   └── authService.ts
+│   │   │   │   └── validators/
+│   │   │   │       └── authValidator.ts
+│   │   │   ├── posts/
+│   │   │   │   ├── controllers/
+│   │   │   │   │   └── postController.ts
+│   │   │   │   ├── models/
+│   │   │   │   │   └── postModel.ts
+│   │   │   │   ├── routes/
+│   │   │   │   │   └── postRoutes.ts
+│   │   │   │   ├── middlewares/
+│   │   │   │   │   └── postMiddleware.ts
+│   │   │   │   ├── services/
+│   │   │   │   │   └── postService.ts
+│   │   │   │   └── validators/
+│   │   │   │       └── postValidator.ts
+│   │   │   ├── user/
+│   │   │   │   ├── controllers/
+│   │   │   │   │   └── userController.ts
+│   │   │   │   ├── models/
+│   │   │   │   │   └── userModel.ts
+│   │   │   │   ├── routes/
+│   │   │   │   │   └── userRoutes.ts
+│   │   │   │   ├── middlewares/
+│   │   │   │   │   └── userMiddleware.ts
+│   │   │   │   ├── services/
+│   │   │   │   │   └── userService.ts
+│   │   │   │   └── validators/
+│   │   │   │       └── userValidator.ts
 │   │   ├── utils/
+│   │   │   └── utilityFunctions.ts
+│   │   │   └── Errors
+│   │   │       └── AppError.ts
+│   │   │       └── handleValidationError.ts
+│   │   │       └── handleZodError.ts
 │   │   ├── app.ts
 │   │   └── server.ts
 │   ├── tests/
+│   │   ├── auth/
+│   │   ├── posts/
+│   │   └── user/
 │   └── package.json
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
+│   │   ├── modules/
+│   │   │   ├── auth/
+│   │   │   │   ├── components/
+│   │   │   │   │   └── AuthForm.tsx
+│   │   │   │   ├── services/
+│   │   │   │   │   └── authService.ts
+│   │   │   │   ├── store/
+│   │   │   │   │   └── authSlice.ts
+│   │   │   ├── posts/
+│   │   │   │   ├── components/
+│   │   │   │   │   └── PostItem.tsx
+│   │   │   │   ├── services/
+│   │   │   │   │   └── postService.ts
+│   │   │   │   ├── store/
+│   │   │   │   │   └── postSlice.ts
+│   │   │   ├── user/
+│   │   │   │   ├── components/
+│   │   │   │   │   └── UserProfile.tsx
+│   │   │   │   ├── services/
+│   │   │   │   │   └── userService.ts
+│   │   │   │   ├── store/
+│   │   │   │   │   └── userSlice.ts
 │   │   ├── store/
+│   │   │   └── rootReducer.ts
+│   │   ├── pages/
+│   │   │   ├── api/
+│   │   │   ├── auth/
+│   │   │   │   └── login.tsx
+│   │   │   ├── posts/
+│   │   │   │   └── [id].tsx
+│   │   │   ├── profile/
+│   │   │   │   └── [id].tsx
+│   │   │   ├── index.tsx
 │   │   ├── App.tsx
 │   │   ├── index.tsx
 │   │   └── setupTests.ts
@@ -129,6 +201,7 @@ maftuh/
 ├── .gitignore
 ├── README.md
 └── LICENSE
+
 ```
 
 ## Functionalities Checklist
