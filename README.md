@@ -1,3 +1,7 @@
+Here is the updated README with the changes reflecting the use of Next.js with the App Router:
+
+---
+
 # Maftuh
 
 This project is going to be a big one. I am going to implement the technologies that I learn along the way in this project. This is going to be my Full Stack Playground. As I am still learning, I might often make mistakes and implement things in the wrong way. But I will learn from my mistakes and improve my skills. Any suggestions, corrections, feedback, and contributions, especially from experienced developers, are highly appreciated.
@@ -25,7 +29,7 @@ Maftuh is a full-stack web application that aims to replicate the functionalitie
 - **Frontend:**
 
   - React
-  - Next.js
+  - Next.js (with App Router)
   - Tailwind CSS
   - TypeScript
   - Redux
@@ -95,7 +99,7 @@ Maftuh is a full-stack web application that aims to replicate the functionalitie
    npm run dev
    ```
 
-3. Open your browser and navigate to `http://localhost:5173`.
+3. Open your browser and navigate to `http://localhost:3000`.
 
 ## Project Structure
 
@@ -149,13 +153,8 @@ maftuh/
 │   │   │       └── AppError.ts
 │   │   │       └── handleValidationError.ts
 │   │   │       └── handleZodError.ts
-│   │   ├── app.ts
-│   │   └── server.ts
-│   ├── tests/
-│   │   ├── auth/
-│   │   ├── posts/
-│   │   └── user/
-│   └── package.json
+│   ├── app.ts
+│   └── server.ts
 ├── frontend/
 │   ├── public/
 │   ├── src/
@@ -165,43 +164,30 @@ maftuh/
 │   │   │   │   │   └── AuthForm.tsx
 │   │   │   │   ├── services/
 │   │   │   │   │   └── authService.ts
-│   │   │   │   ├── store/
-│   │   │   │   │   └── authSlice.ts
 │   │   │   ├── posts/
 │   │   │   │   ├── components/
 │   │   │   │   │   └── PostItem.tsx
 │   │   │   │   ├── services/
 │   │   │   │   │   └── postService.ts
-│   │   │   │   ├── store/
-│   │   │   │   │   └── postSlice.ts
 │   │   │   ├── user/
 │   │   │   │   ├── components/
 │   │   │   │   │   └── UserProfile.tsx
 │   │   │   │   ├── services/
 │   │   │   │   │   └── userService.ts
-│   │   │   │   ├── store/
-│   │   │   │   │   └── userSlice.ts
-│   │   ├── store/
-│   │   │   └── rootReducer.ts
-│   │   ├── pages/
-│   │   │   ├── api/
-│   │   │   ├── auth/
-│   │   │   │   └── login.tsx
-│   │   │   ├── posts/
-│   │   │   │   └── [id].tsx
-│   │   │   ├── profile/
-│   │   │   │   └── [id].tsx
-│   │   │   ├── index.tsx
-│   │   ├── App.tsx
-│   │   ├── index.tsx
-│   │   └── setupTests.ts
+│   │   ├── app/
+│   │   │   └── page.tsx
+│   │   ├── posts/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   ├── profile/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
 │   └── package.json
 ├── docs/
 ├── .env
 ├── .gitignore
 ├── README.md
 └── LICENSE
-
 ```
 
 ## Functionalities Checklist

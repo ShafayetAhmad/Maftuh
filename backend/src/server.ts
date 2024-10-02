@@ -1,8 +1,10 @@
-import express, { Request, Response } from "express";
+import express, { Application, Request, Response } from "express";
+import dotenv from "dotenv";
+dotenv.config();
 
-const app = express();
-const port = 5000;
-
+const app: Application = express();
+const port = process.env.PORT || 3000;
+console.log(process.env.PORT);
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Maftuh");
 });
