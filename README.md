@@ -134,55 +134,32 @@ maftuh/
 │   │   │   │   │   └── postService.ts
 │   │   │   │   └── validators/
 │   │   │   │       └── postValidator.ts
-│   │   │   ├── user/
-│   │   │   │   ├── controllers/
-│   │   │   │   │   └── userController.ts
-│   │   │   │   ├── models/
-│   │   │   │   │   └── userModel.ts
-│   │   │   │   ├── routes/
-│   │   │   │   │   └── userRoutes.ts
-│   │   │   │   ├── middlewares/
-│   │   │   │   │   └── userMiddleware.ts
-│   │   │   │   ├── services/
-│   │   │   │   │   └── userService.ts
-│   │   │   │   └── validators/
-│   │   │   │       └── userValidator.ts
-│   │   ├── utils/
-│   │   │   └── utilityFunctions.ts
-│   │   │   └── Errors
-│   │   │       └── AppError.ts
-│   │   │       └── handleValidationError.ts
-│   │   │       └── handleZodError.ts
 │   ├── app.ts
 │   └── server.ts
 ├── frontend/
-│   ├── public/
 │   ├── src/
-│   │   ├── modules/
-│   │   │   ├── auth/
-│   │   │   │   ├── components/
-│   │   │   │   │   └── AuthForm.tsx
-│   │   │   │   ├── services/
-│   │   │   │   │   └── authService.ts
-│   │   │   ├── posts/
-│   │   │   │   ├── components/
-│   │   │   │   │   └── PostItem.tsx
-│   │   │   │   ├── services/
-│   │   │   │   │   └── postService.ts
-│   │   │   ├── user/
-│   │   │   │   ├── components/
-│   │   │   │   │   └── UserProfile.tsx
-│   │   │   │   ├── services/
-│   │   │   │   │   └── userService.ts
 │   │   ├── app/
-│   │   │   └── page.tsx
-│   │   ├── posts/
-│   │   │   └── [id]/
-│   │   │       └── page.tsx
-│   │   ├── profile/
-│   │   │   └── [id]/
-│   │   │       └── page.tsx
-│   └── package.json
+│   │   │   ├── auth/             # Auth module (route)
+│   │   │   │   ├── page.tsx      # Auth page component
+│   │   │   │   ├── login.tsx     # Login page component
+│   │   │   │   └── signup.tsx    # Signup page component
+│   │   │   ├── posts/            # Posts module (route)
+│   │   │   │   ├── page.tsx      # Posts listing page
+│   │   │   │   ├── [id]/         # Dynamic route for individual posts
+│   │   │   │   │   └── page.tsx  # Post details page
+│   │   │   ├── profile/          # Profile module (route)
+│   │   │   │   ├── [id]/         # Dynamic route for user profile
+│   │   │   │   │   └── page.tsx  # Profile details page
+│   │   │   ├── settings/         # Settings module (route)
+│   │   │   │   ├── page.tsx      # Settings page component
+│   │   ├── components/           # Shared components (e.g., navbar, footer)
+│   │   │   ├── Navbar.tsx        # Example shared component
+│   │   ├── styles/               # Global styles (CSS, SCSS)
+│   │   └── utils/                # Utility functions
+│   │       └── api.ts            # API utility functions
+│   ├── public/                   # Static assets (images, fonts, etc.)
+│   ├── package.json
+│   └── tsconfig.json
 ├── docs/
 ├── .env
 ├── .gitignore
