@@ -32,7 +32,7 @@ const LeftNavbar: FC = () => {
       <Link className="text-2xl font-bold mb-8 text-blue-500" href="/">
         <Image
           className="m-2"
-          alt="logo"    
+          alt="logo"
           src={"/icon_m.jpg"}
           width={40}
           height={40}
